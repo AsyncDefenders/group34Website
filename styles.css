@@ -153,6 +153,7 @@ a {
     text-align: center;
     padding: 2em;
     height: 70vh;
+    padding: 2em;
 }
 
 .hero-banner:before {
@@ -185,7 +186,6 @@ a {
 
 .hero-banner-content h1 {
     font-size: 3em; /* Increase font size of header */
-    margin-bottom: 1em; /* Add margin below the header */
 }
 
 /* BUTTONS */
@@ -223,48 +223,6 @@ a {
 /* .btn:hover {
     opacity: 0.8;
 } */
-
-/* FOOTER CONTAINER*/
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    padding: 1.5em 1em;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-.footer-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.columns-container {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1em;
-    text-align: center;
-}
-
-.contact-info *,
-.social-media *,
-.sitemap * {
-    text-align: left;
-}
-
-.developer-info {
-    align-self: center;
-    text-align: center;
-    font-weight: 100;
-    font-size: 0.5em;
-}
 
 /* ATTRACTIONS SECTION */
 
@@ -366,7 +324,6 @@ a {
     }
 }
 
-
 /* REVIEWS SECTION */
 .reviews-container {
     display: flex;
@@ -374,9 +331,9 @@ a {
     animation: float 20s infinite linear;
     padding: 20px;
     overflow: hidden;
-  }
-  
-  .review-card {
+}
+
+.review-card {
     flex: 0 0 auto;
     display: flex;
     align-items: center;
@@ -385,60 +342,126 @@ a {
     box-sizing: border-box;
     background-color: #f0f0f0;
     border-radius: 10px;
-  }
-  
-  .reviewer-image {
+}
+
+.reviewer-image {
     width: 80px;
     height: 80px;
     object-fit: cover;
     border-radius: 50%;
     margin-right: 20px;
-  }
-  
-  .review-content {
-    flex: 1;
-  }
+}
 
-  .carousel {
+.review-content {
+    flex: 1;
+}
+
+.carousel {
     overflow: hidden;
-  }
-  
-  .carousel_track-container {
+}
+
+.carousel_track-container {
     width: 100%;
     overflow: hidden;
-  }
-  
-  .carousel_track {
+}
+
+.carousel_track {
     display: flex;
     animation: scroll 20s linear infinite;
-  }
-  
-  .carousel_slide {
+}
+
+.carousel_slide {
     display: flex;
     align-items: center;
     width: 100%;
     padding: 15px;
-  }
-  
-  .reviewer_image {
+}
+
+.reviewer_image {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     margin-right: 15px;
-  }
-  
-  @keyframes scroll {
+}
+
+@keyframes scroll {
     0% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%);
+        transform: translateX(-50%);
     }
-  }
-  
-  
-  @keyframes float {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
-  
+}
+
+@keyframes float {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* FOOTER CONTAINER*/
+.footer-container {
+    color: #fff; /* replace with your preferred color */
+    font-weight: 200;
+    font-size: 16px;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 1em;
+}
+
+.site-name {
+    margin: 1em;
+    text-align: center;
+}
+
+.footer-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-size: 16px;
+    width: 100%;
+    flex-wrap: wrap; /* to make it responsive */
+    padding: 1em 0;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px; /* add some space between the columns */
+    flex: 1; /* each column will take up an equal amount of space */
+}
+
+.footer-column h3 {
+    font-size: large;
+    padding: 0 0 20px;
+}
+
+.footer-column img {
+    width: 30px; /* adjust this value as needed */
+    height: auto;
+}
+
+.footer-column a {
+    color: var(--light);
+}
+
+.developer-info {
+    text-align: center;
+    font-size: small;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 600px) {
+    .footer-details {
+        flex-direction: column;
+    }
+}
