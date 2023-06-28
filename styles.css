@@ -14,10 +14,10 @@
 /* SYSTEM VARIABLES*/
 :root {
     /* PALETTE */
-    --primary: #8B76E8;
+    --primary: #8b76e8;
     --secondary: #e9e9fc;
-    --accent-p: #FEA16F;
-    --accent-s: #D4E88B;
+    --accent-p: #fea16f;
+    --accent-s: #d4e88b;
     --success: #befabec6;
     --info: #a2dbe4;
 
@@ -25,7 +25,7 @@
     --danger: #d15951;
 
     --light: #f4f4f4;
-    --dark: #180D49;
+    --dark: #180d49;
 
     /* BREAKPOINTS */
     --sm: 600px;
@@ -45,7 +45,7 @@
 }
 
 .light-font {
-    color: var(--light)
+    color: var(--light);
 }
 
 .lime-font {
@@ -53,15 +53,26 @@
 }
 
 .peach-font {
-    color: var(--accent-p)
+    color: var(--accent-p);
 }
 
+h1 {
+    font-size: 1.5em;
+}
 
-/* FLEX */
+h2 {
+    font-size: 1.2em;
+}
 
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
+/* BACKGROUNDS */
+.bg-light {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.bg-dark {
+    background-color: var(--dark);
+    color: var(--light);
 }
 
 /* REMOVING ALL STYLING FOR ALL TYPES OF CONTAINERS AND ELEMENTS */
@@ -91,9 +102,11 @@ a {
     justify-content: space-between;
     padding: 1em 2em;
     align-items: center;
-    background-color: var(--primary);/* Adjust this to get the matte glass effect */
+    background-color: var(
+        --primary
+    ); /* Adjust this to get the matte glass effect */
     backdrop-filter: blur(5px);
-    box-shadow: 0 8px 8px -4px var(--secondary)
+    box-shadow: 0 8px 8px -4px var(--secondary);
 }
 
 .logo-container {
@@ -108,7 +121,7 @@ a {
 }
 
 .webdy-logo {
-    color: var(--accent-s)
+    color: var(--accent-s);
 }
 
 .nav-links {
@@ -142,6 +155,18 @@ a {
     height: 70vh;
 }
 
+.hero-banner:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dark);
+    opacity: 0.6;
+    z-index: 1;
+}
+
 .hero-banner-image {
     position: absolute;
     top: 0;
@@ -149,7 +174,7 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 1;
+    z-index: 0;
 }
 
 .hero-banner-content {
@@ -158,6 +183,10 @@ a {
     color: var(--light);
 }
 
+.hero-banner-content h1 {
+    font-size: 3em; /* Increase font size of header */
+    margin-bottom: 1em; /* Add margin below the header */
+}
 
 /* BUTTONS */
 .btn {
@@ -195,218 +224,221 @@ a {
     opacity: 0.8;
 } */
 
-
-
-/* GRID SYSTEM */
-.grid-container {
-    display: grid;
-    grid-gap: 15px;
-    grid-template-columns: repeat(12, 1fr);
+/* FOOTER CONTAINER*/
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em 1em;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.grid-item {
-    background-color: #f1f1f1;
-    padding: 20px;
-    border: 1px solid black;
+.columns-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
     text-align: center;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .xs-1 {
-        grid-column: span 1;
+.contact-info *,
+.social-media *,
+.sitemap * {
+    text-align: left;
+}
+
+.developer-info {
+    align-self: center;
+    text-align: center;
+    font-weight: 100;
+    font-size: 0.5em;
+}
+
+/* ATTRACTIONS SECTION */
+
+.res-container {
+    padding: 2em 2em;
+    background: linear-gradient(
+        -45deg,
+        var(--accent-p),
+        var(--accent-s),
+        var(--secondary),
+        var(--success)
+    );
+    background-size: 400% 400%;
+    animation: colorful-gradient 15s ease infinite;
+}
+
+.res-container h2 {
+    margin: 1em;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch; /* Add this property */
+    margin: auto;
+}
+
+.card {
+    flex: 1 0 calc(30% - 20px); /* approx third of the container width minus some margin, you can adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1em;
+    box-sizing: border-box;
+    align-items: stretch;
+    padding: 0 0 10px;
+    border-radius: 20px;
+    cursor: pointer;
+
+    background: rgba(255, 255, 255, 0.5); /* Adjust transparency as desired */
+    overflow: hidden;
+    transition: transform 0.8s ease-in-out; /* Controls the scaling transition on hover */
+    backdrop-filter: blur(10px); /* Creates the frosted glass effect */
+}
+
+.card img {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ensure the image covers the full width of the card */
+    max-height: 200px; /* limit the height of the image */
+}
+
+.card * {
+    flex: 1;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.card .btn {
+    flex-grow: 0;
+    align-self: center;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 0 100%;
     }
-    .xs-2 {
-        grid-column: span 2;
-    }
-    .xs-3 {
-        grid-column: span 3;
-    }
-    .xs-4 {
-        grid-column: span 4;
-    }
-    .xs-5 {
-        grid-column: span 5;
-    }
-    .xs-6 {
-        grid-column: span 6;
-    }
-    .xs-7 {
-        grid-column: span 7;
-    }
-    .xs-8 {
-        grid-column: span 8;
-    }
-    .xs-9 {
-        grid-column: span 9;
-    }
-    .xs-10 {
-        grid-column: span 10;
-    }
-    .xs-11 {
-        grid-column: span 11;
-    }
-    .xs-12 {
-        grid-column: span 12;
+
+    .res-container {
+        margin: 1em 1em;
     }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    .sm-1 {
-        grid-column: span 1;
-    }
-    .sm-2 {
-        grid-column: span 2;
-    }
-    .sm-3 {
-        grid-column: span 3;
-    }
-    .sm-4 {
-        grid-column: span 4;
-    }
-    .sm-5 {
-        grid-column: span 5;
-    }
-    .sm-6 {
-        grid-column: span 6;
-    }
-    .sm-7 {
-        grid-column: span 7;
-    }
-    .sm-8 {
-        grid-column: span 8;
-    }
-    .sm-9 {
-        grid-column: span 9;
-    }
-    .sm-10 {
-        grid-column: span 10;
-    }
-    .sm-11 {
-        grid-column: span 11;
-    }
-    .sm-12 {
-        grid-column: span 12;
+@media (max-width: 1200px) {
+    .card {
+        flex: 1 0 calc(50% - 20px); /* half of the container width minus some margin */
     }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .md-1 {
-        grid-column: span 1;
+/* KEYFRAMES ANIMATION */
+
+@keyframes colorful-gradient {
+    0% {
+        background-position: 0% 50%;
     }
-    .md-2 {
-        grid-column: span 2;
+    50% {
+        background-position: 100% 50%;
     }
-    .md-3 {
-        grid-column: span 3;
-    }
-    .md-4 {
-        grid-column: span 4;
-    }
-    .md-5 {
-        grid-column: span 5;
-    }
-    .md-6 {
-        grid-column: span 6;
-    }
-    .md-7 {
-        grid-column: span 7;
-    }
-    .md-8 {
-        grid-column: span 8;
-    }
-    .md-9 {
-        grid-column: span 9;
-    }
-    .md-10 {
-        grid-column: span 10;
-    }
-    .md-11 {
-        grid-column: span 11;
-    }
-    .md-12 {
-        grid-column: span 12;
+    100% {
+        background-position: 0% 50%;
     }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .lg-1 {
-        grid-column: span 1;
-    }
-    .lg-2 {
-        grid-column: span 2;
-    }
-    .lg-3 {
-        grid-column: span 3;
-    }
-    .lg-4 {
-        grid-column: span 4;
-    }
-    .lg-5 {
-        grid-column: span 5;
-    }
-    .lg-6 {
-        grid-column: span 6;
-    }
-    .lg-7 {
-        grid-column: span 7;
-    }
-    .lg-8 {
-        grid-column: span 8;
-    }
-    .lg-9 {
-        grid-column: span 9;
-    }
-    .lg-10 {
-        grid-column: span 10;
-    }
-    .lg-11 {
-        grid-column: span 11;
-    }
-    .lg-12 {
-        grid-column: span 12;
-    }
-}
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    .xl-1 {
-        grid-column: span 1;
+/* REVIEWS SECTION */
+.reviews-container {
+    display: flex;
+    overflow: auto;
+    animation: float 20s infinite linear;
+    padding: 20px;
+    overflow: hidden;
+  }
+  
+  .review-card {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+  }
+  
+  .reviewer-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .review-content {
+    flex: 1;
+  }
+
+  .carousel {
+    overflow: hidden;
+  }
+  
+  .carousel_track-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel_track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+  }
+  
+  .carousel_slide {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+  }
+  
+  .reviewer_image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
     }
-    .xl-2 {
-        grid-column: span 2;
+    100% {
+      transform: translateX(-50%);
     }
-    .xl-3 {
-        grid-column: span 3;
-    }
-    .xl-4 {
-        grid-column: span 4;
-    }
-    .xl-5 {
-        grid-column: span 5;
-    }
-    .xl-6 {
-        grid-column: span 6;
-    }
-    .xl-7 {
-        grid-column: span 7;
-    }
-    .xl-8 {
-        grid-column: span 8;
-    }
-    .xl-9 {
-        grid-column: span 9;
-    }
-    .xl-10 {
-        grid-column: span 10;
-    }
-    .xl-11 {
-        grid-column: span 11;
-    }
-    .xl-12 {
-        grid-column: span 12;
-    }
-}
+  }
+  
+  
+  @keyframes float {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  
