@@ -557,3 +557,46 @@ a {
         font-size: 0.6em;
     }
 }
+
+
+/* ACCORDION */
+
+.accordion {
+    width: 90%;
+    max-width: 90%;
+    align-self: center;
+    margin: 0 auto;
+    padding: 20px;
+    color: var(--dark)
+}
+
+.section-title {
+    margin: 2em 0;
+    text-align: center;
+}
+
+.accordion-item {
+    background-color: var(--accent-s);
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 1em 1em;
+}
+
+.accordion-title {
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.accordion-content {
+    margin: 0;
+    padding: 0 10px 10px;
+}
+
+@media (max-width: 600px) {
+    .accordion {
+        width: 100%;
+        padding: 10px;
+    }
+}
