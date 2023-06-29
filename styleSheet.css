@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bagel+Fat+One&display=swap');
+
 h1{
-    font-family: Bagel Fat One, BagelFatOne-Regular, sans-serif;
+    font-family: 'Bagel Fat One', cursive;
     font-style: normal;
     font-variant: normal;
     font-weight: normal;
-    font-size: 2em;
+    font-size: 3em;
     color: rgb(230, 86, 103);
 };
 
 h2{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Acme', sans-serif;
     font-style: normal;
     font-variant: normal;
     font-weight: bold;
@@ -17,7 +19,7 @@ h2{
 }
 
 h3{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Acme', sans-serif;
     font-style: normal;
     font-variant: normal;
     font-weight: bold;
@@ -26,13 +28,23 @@ h3{
 }
 
 p{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Acme', sans-serif;
     font-style: normal;
     font-variant: normal;
     font-weight: normal;
     font-size: 15px;;
-    color: black;
+    color: rgb(230, 86, 103);
 }
+
+q{
+    font-family: 'Acme', sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 15px;;
+    color: rgb(230, 86, 103);
+}
+
 
 body{background-color: rgb(255, 195, 71)}
 
@@ -55,7 +67,7 @@ li{float:left;}
 
 li a{
     display: block;
-    color: white;
+    color:rgb(230, 86, 103);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -76,7 +88,7 @@ li a:hover:not(.active) {
 }
     
 
-#FPBanner{grid-area: banner;
+#FPBanner{grid-area: header;
     text-align: center;
     padding:5%;
     margin:10px;
@@ -115,7 +127,7 @@ li a:hover:not(.active) {
     grid-template-columns: auto auto auto ;
     grid-template-areas:
         'nav nav nav'
-        'banner banner banner'
+        'header header header'
         'column1 column2 column3'
         'low low low'
         'footer footer footer';
