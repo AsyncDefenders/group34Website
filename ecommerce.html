@@ -35,10 +35,11 @@
         <header aria-label="Navigation">
             <!-- Big flexbox container to align all our elements evenely -->
             <div class="nav-container">
-
                 <!-- Logo container element, that will push user to the homepage -->
                 <a class="logo-container" href="index.html">
-                    <h1 class="webdy-logo accent-font lime-font" aria->WEBDY</h1>
+                    <h1 class="webdy-logo accent-font lime-font" aria->
+                        WEBDY
+                    </h1>
                 </a>
                 <!-- We used nav tag for pure semantic meanings, so screen reader could easily read the content: links -->
                 <!-- Also it help to understand the makrup for other developers and style components -->
@@ -65,6 +66,31 @@
 
         <!-- Main navigation contains the content of the website: all articles, photos, tables and etc. -->
         <main>
+            <section class="hero-banner">
+                <img
+                    class="hero-banner-image"
+                    src="assets/banner3.jpg"
+                    alt="Roller Coaster advertising banner photo"
+                />
+                <div class="hero-banner-content">
+                    <h1 class="accent-font light-font">Give a Chance</h1>
+                    <br />
+                    <h1 class="accent-font lime-font">To our Slides</h1>
+
+                    <p class="light-font">
+                        Come to the opening of the biggest high-speed slides in
+                        the whole world! 15 minutes of adrenaline and
+                        unforgettable impressions!
+                    </p>
+
+                    <button
+                        class="btn primary-button"
+                        onclick="() => {console.log('a')}"
+                    >
+                        Learn More
+                    </button>
+                </div>
+            </section>
             <div class="grid-container-index">
                 <nav>
                     <ul>
@@ -127,10 +153,20 @@
                 <div class="footer-column">
                     <h3>Follow Us</h3>
                     <div>
-                        <a><img src="assets/instagram.png" alt="Facebook" /></a>
-                        <a><img src="assets/instagram.png" alt="Twitter" /></a>
-                        <a
-                            ><img src="assets/instagram.png" alt="Instagram"
+                        <a href="https://www.instagram.com/" target="_blank"
+                            ><img
+                                src="assets/instagram.png"
+                                alt="Follow us on Instagram"
+                        /></a>
+                        <a href="https://twitter.com/" target="_blank"
+                            ><img
+                                src="assets/twitter.png"
+                                alt="Follow us on Twitter"
+                        /></a>
+                        <a href="https://facebook.com/" target="_blank"
+                            ><img
+                                src="assets/facebook.png"
+                                alt="Follow us on Facebook"
                         /></a>
                     </div>
                 </div>
@@ -138,10 +174,10 @@
                 <!-- SITEMAP -->
                 <div class="footer-column">
                     <h3>Site Map</h3>
-                    <a href="#">Events</a>
-                    <a href="#">Rides</a>
-                    <a href="#">Restraunts</a>
-                    <a href="#">Help</a>
+                    <a href="ecommerce.html#events">Events</a>
+                    <a href="ecommerce.html#rides">Rides</a>
+                    <a href="ecommerce.html#restraunts">Restraunts</a>
+                    <a href="help.html">Help</a>
                 </div>
             </div>
 
