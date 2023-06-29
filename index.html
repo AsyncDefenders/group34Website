@@ -1,53 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- Head contains all information about the page: metadata, keywords, authors, link to stylesheets -->
+    <!-- Also we define title of the page, viewport scaling -->
     <head>
+        <!-- Title for the page that is placed on tab of the browser -->
         <title>Webdy Amusement Park</title>
+        <!-- Here we specifying a recommended set of HTML5 charachters -->
         <meta charset="utf-8" />
+        <!-- We define description with specific keywords to help SEO, so serach engines could easily find our website -->
         <meta
             name="description"
             content="official website for the Webdy amusement park where you can find information about the park, buy tickets and buy merchandise"
         />
         <meta
-            name="author"
-            content="UoL Goldsmiths Web Development April 2023 Group 34"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="refresh" content="600" />
-        <meta
             name="keywords"
-            content="Book Reading Discussion 'Reading Club'"
+            content="Webdy, amusement, theme park, children park, concerts, events, tickets, roller coasters, wheel, food"
         />
+        <!-- Metdata that contains information about authors of the website -->
         <meta
-            name="og:title"
-            property="og:title"
-            content="official website for the amusement park"
+            name="author"
+            content="UoL Goldsmiths Web Development April 2023 Group 34: Lisa, David, Hyukjin, Andy, Fabio"
         />
-        <meta name="robots" content="index, follow" />
+        <!-- Here defined visible area of the site: initial scale level that is set to be 1 for the screen width -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Here the link for the css file with all styles and styling rules -->
         <link rel="stylesheet" type="text/css" href="styles.css" />
     </head>
 
+    <!-- Body tag contain the visible part of our website. Here we define structure of what and how content would look like -->
+    <!-- Primarily, we splitted it to three semantic sections: header, main, footer. -->
+    <!-- Each of these sections contain data accroding it's semantic meaning -->
     <body>
-        <!-- Styling Navigation Menu -->
-        <header>
+        <header aria-label="Navigation">
+            <!-- Big flexbox container to align all our elements evenely -->
             <div class="nav-container">
-                <a class="logo-container" href="/">
-                    <!-- <img src="assets/logo.png" alt="WEBDY park logo" /> -->
-                    <h1 class="webdy-logo accent-font lime-font">WEBDY</h1>
-                </a>
 
+                <!-- Logo container element, that will push user to the homepage -->
+                <a class="logo-container" href="index.html">
+                    <h1 class="webdy-logo accent-font lime-font" aria->WEBDY</h1>
+                </a>
+                <!-- We used nav tag for pure semantic meanings, so screen reader could easily read the content: links -->
+                <!-- Also it help to understand the makrup for other developers and style components -->
                 <nav class="nav-links">
-                    <a href="#" class="nav-link">Rides</a>
-                    <a href="#" class="nav-link">Events</a>
-                    <a href="#" class="nav-link">Restraunts</a>
-                    <a href="#" class="nav-link">Reviews</a>
-                    <a href="/help.html" class="nav-link">Help</a>
+                    <!-- There is no n -->
+                    <ul>
+                        <a href="/ecommerce.html#rides" class="nav-link"
+                            >Rides</a
+                        >
+                        <a href="/ecommerce.html#events" class="nav-link"
+                            >Events</a
+                        >
+                        <a href="/ecommerce.html#restraunts" class="nav-link"
+                            >Restraunts</a
+                        >
+                        <a href="/help.html/#reviews" class="nav-link"
+                            >Reviews</a
+                        >
+                        <a href="/help.html" class="nav-link">Help</a>
+                    </ul>
                 </nav>
             </div>
         </header>
 
-        <!-- Menu for navigation -->
+        <!-- Main navigation contains the content of the website: all articles, photos, tables and etc. -->
         <main>
-            <!-- BANNER STYLING -->
             <section class="hero-banner">
                 <img
                     class="hero-banner-image"
@@ -118,6 +135,8 @@
                     <!-- Repeat for each card -->
                 </div>
             </section>
+
+            <section></section>
 
             <section class="reviews-container">
                 <div class="carousel">
