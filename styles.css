@@ -97,16 +97,17 @@ a {
 } */
 
 /* NAVIGATION */
+/* Mobile first */
 .nav-container {
     display: flex;
-    justify-content: space-between;
-    padding: 1em 2em;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    padding: 1em 2em;
     background-color: var(
         --primary
     ); /* Adjust this to get the matte glass effect */
-    backdrop-filter: blur(5px);
-    box-shadow: 0 8px 8px -4px var(--secondary);
+    backdrop-filter: blur(5px); 
 }
 
 .logo-container {
@@ -120,18 +121,14 @@ a {
     margin-right: 0.5em;
 }
 
-.webdy-logo {
-    color: var(--accent-s);
-}
-
 .nav-links {
     display: flex;
-    gap: 0.3em;
+    gap: 0.5em;
+    font-size: initial;
 }
 
 .nav-link {
     color: var(--accent-s);
-    font-size: 0.8em;
     font-weight: 400;
     transition: color 0.3s ease;
 }
@@ -143,6 +140,25 @@ a {
 .nav-link:active {
     text-decoration: solid;
 }
+
+/* Larger screens */
+@media (min-width: 600px) {
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1em 2em;
+    }
+    
+    .nav-links {
+        display: flex;
+        font-size: 0.8em;
+    }
+    
+    .logo-container {
+        margin-bottom: 0;
+    }
+}
+
 
 /* HERO BANNER */
 .hero-banner {
@@ -192,6 +208,11 @@ a {
     font-size: 3em; /* Increase font size of header */
 }
 
+@media (max-width: 768px) {
+    .hero-banner-content {
+        font-size: initial;
+    }
+}
 /* BUTTONS */
 .btn {
     margin: 20px 0;
@@ -275,7 +296,7 @@ a {
     background: rgba(255, 255, 255, 0.5); /* Adjust transparency as desired */
     overflow: hidden;
     transition: transform 0.8s ease-in-out; /* Controls the scaling transition on hover */
-    backdrop-filter: blur(10px); /* Creates the frosted glass effect */
+    backdrop-filter: blur(30px); /* Creates the frosted glass effect */
 }
 
 .card img {
@@ -283,7 +304,7 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover; /* ensure the image covers the full width of the card */
-    max-height: 200px; /* limit the height of the image */
+    min-height: 200px; /* limit the height of the image */
 }
 
 .card * {
@@ -292,9 +313,9 @@ a {
     margin: 10px 0;
 }
 
-.card p,
-a,
-h3 {
+.card > p,
+.card > a,
+.card > h3  {
     padding: 20px 20px;
 }
 
@@ -311,10 +332,12 @@ h3 {
 @media (max-width: 768px) {
     .card {
         flex: 1 0 100%;
+        margin: 1em 0.5em;
     }
 
     .res-container {
         margin: 1em 1em;
+        padding: 0;
     }
 }
 
@@ -477,6 +500,7 @@ h3 {
 @media (max-width: 600px) {
     .footer-details {
         flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -485,19 +509,35 @@ h3 {
 
 .schedule {
     padding: 2em;
-    background-color: #f5f5f5;
+    background-color:var(--light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
 }
 
-.schedule table {
-    width: 100%;
-    /* border-collapse: collapse; */
+.schedule div {
+    max-width: 90%; /* Set a maximum width to the div */
     border: var(--primary) solid 15px;
+    border-radius: 20px;
+    margin: 1em 0;
+    align-items: center;
+    overflow: auto; /* Ensures that the div will have a scrollbar if the table is too wide */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling transition */
+}
+
+.schedule div table {
+    width: 100%; 
+    border-collapse: collapse;
+    table-layout: fixed; 
 }
 
 .schedule th, .schedule td {
     text-align: left;
     padding: 0.5em;
-    border-bottom: 1px solid #ddd;
+    word-wrap: break-word; /* Ensures that the content will wrap if it's too wide for its cell */
 }
 
 .schedule thead th {
@@ -506,4 +546,40 @@ h3 {
 
 .schedule tr:nth-child(even) {
     background-color: var(--secondary);
+}
+
+@media (max-width: 600px) {
+    .schedule {
+        padding: 1em 0.5em;
+    }
+    .schedule div {
+        transform: scale(1); /* Scale the div down on small screens */
+        font-size: 0.6em;
+    }
+}
+
+
+/* DIFFERENT MEDIA RESPONSIVE */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }
