@@ -255,6 +255,10 @@ a {
 
 /* ATTRACTIONS SECTION */
 
+.attraction-description {
+    font-size: 1em;
+}
+
 .res-container {
     padding: 2em 2em;
     /* background: linear-gradient(
