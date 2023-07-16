@@ -1,262 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Head contains all information about the page: metadata, keywords, authors, link to stylesheets -->
-    <!-- Also we define title of the page, viewport scaling -->
-    <head>
-        <!-- Title for the page that is placed on tab of the browser -->
-        <title>Webdy Amusement Park</title>
-        <!-- Here we specifying a recommended set of HTML5 charachters -->
-        <meta charset="utf-8" />
-        <!-- We define description with specific keywords to help SEO, so serach engines could easily find our website -->
-        <meta
-            name="description"
-            content="official website for the Webdy amusement park where you can find information about the park, buy tickets and buy merchandise"
-        />
-        <meta
-            name="keywords"
-            content="Webdy, amusement, theme park, children park, concerts, events, tickets, roller coasters, wheel, food"
-        />
-        <!-- Metdata that contains information about authors of the website -->
-        <meta
-            name="author"
-            content="UoL Goldsmiths Web Development April 2023 Group 34: Lisa, David, Hyukjin, Andy, Fabio"
-        />
-        <!-- Here defined visible area of the site: initial scale level that is set to be 1 for the screen width -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Head contains all information about the page: metadata, keywords, authors, link to stylesheets -->
+<!-- Also we define title of the page, viewport scaling -->
 
-        <!-- Here the link for the css file with all styles and styling rules -->
-        <link rel="stylesheet" type="text/css" href="styles.css" />
-    </head>
+<head>
+    <!-- Title for the page that is placed on tab of the browser -->
+    <title>Webdy Amusement Park</title>
+    <!-- Here we specifying a recommended set of HTML5 charachters -->
+    <meta charset="utf-8" />
+    <!-- We define description with specific keywords to help SEO, so serach engines could easily find our website -->
+    <meta name="description"
+        content="official website for the Webdy amusement park where you can find information about the park, buy tickets and buy merchandise" />
+    <meta name="keywords"
+        content="Webdy, amusement, theme park, children park, concerts, events, tickets, roller coasters, wheel, food" />
+    <!-- Metdata that contains information about authors of the website -->
+    <meta name="author"
+        content="UoL Goldsmiths Web Development April 2023 Group 34: Lisa, David, Hyukjin, Andy, Fabio" />
+    <!-- Here defined visible area of the site: initial scale level that is set to be 1 for the screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Body tag contain the visible part of our website. Here we define structure of what and how content would look like -->
-    <!-- Primarily, we splitted it to three semantic sections: header, main, footer. -->
-    <!-- Each of these sections contain data accroding it's semantic meaning -->
-    <body>
-        <header aria-label="Navigation">
-            <!-- Big flexbox container to align all our elements evenely -->
-            <div class="nav-container">
-                <!-- Logo container element, that will push user to the homepage -->
-                <a class="logo-container" href="index.html">
-                    <h1 class="webdy-logo accent-font lime-font" aria->
-                        WEBDY
-                    </h1>
-                </a>
-                <!-- We used nav tag for pure semantic meanings, so screen reader could easily read the content: links -->
-                <!-- Also it help to understand the makrup for other developers and style components -->
-                <nav class="nav-links">
-                        <a href="/ecommerce.html#rides" class="nav-link"
-                            >Rides</a
-                        >
-                        <a href="/ecommerce.html#events" class="nav-link"
-                            >Events</a
-                        >
-                        <a href="/ecommerce.html#restraunts" class="nav-link"
-                            >Restraunts</a
-                        >
-                        <a href="/help.html#reviews" class="nav-link"
-                            >Reviews</a
-                        >
-                        <a href="/help.html" class="nav-link">Help</a>
-                </nav>
+    <!-- Here the link for the css file with all styles and styling rules -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<!-- Body tag contain the visible part of our website. Here we define structure of what and how content would look like -->
+<!-- Primarily, we splitted it to three semantic sections: header, main, footer. -->
+<!-- Each of these sections contain data accroding it's semantic meaning -->
+
+<body>
+    <header aria-label="Navigation">
+        <!-- Big flexbox container to align all our elements evenely -->
+        <div class="nav-container">
+            <!-- Logo container element, that will push user to the homepage -->
+            <a class="logo-container" href="index.html">
+                <h1 class="webdy-logo accent-font lime-font" aria->
+                    WEBDY
+                </h1>
+            </a>
+            <!-- We used nav tag for pure semantic meanings, so screen reader could easily read the content: links -->
+            <!-- Also it help to understand the makrup for other developers and style components -->
+            <nav class="nav-links">
+                <a href="/ecommerce.html#rides" class="nav-link">Rides</a>
+                <a href="/ecommerce.html#events" class="nav-link">Events</a>
+                <a href="/ecommerce.html#restraunts" class="nav-link">Restaurants</a>
+                <a href="/help.html#reviews" class="nav-link">Reviews</a>
+                <a href="/help.html" class="nav-link">Help</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main navigation contains the content of the website: all articles, photos, tables and etc. -->
+    <main>
+        <section class="hero-banner">
+            <img class="hero-banner-image" src="assets/rides/galactic_cruiser.jpg" alt="hero banner" />
+            <div class="hero-banner-content">
+                <h1 class="accent-font light-font">Your mission to adventure</h1>
+                <br />
+                <h1 class="accent-font lime-font">Starts Right Here!</h1>
+
+                <p class="light-font">
+                    Visit us and get the best experience of your life!
+                </p>
+
+                <button class="btn primary-button">Learn More</button>
             </div>
-        </header>
+        </section>
 
-        <!-- Main navigation contains the content of the website: all articles, photos, tables and etc. -->
-        <main>
-            <section class="hero-banner">
-                <img
-                    class="hero-banner-image"
-                    src="assets/rides/galactic_cruiser.jpg"
-                    alt="hero banner"
-                />
-                <div class="hero-banner-content">
-                    <h1 class="accent-font light-font">Your Big Event</h1>
-                    <br />
-                    <h1 class="accent-font lime-font">Right Here!</h1>
-
-                    <p class="light-font">
-                        Additional Information About the Event Here
+        <section id="attractions" class="res-container dark-font">
+            <h2 class="accent-font">Attractions</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="assets/rides/dragons_flight.jpg" alt="Rides" />
+                    <h3 class="attraction-name">Rides</h3>
+                    <p class="attraction-description">
+                        You can check our most famous roller coasters,
+                        wheels and more!
                     </p>
-
-                    <button class="btn primary-button">Learn More</button>
+                    <a href="/ecommerce.html#rides" class="btn">Learn More</a>
                 </div>
-            </section>
-
-            <section id="attractions" class="res-container dark-font">
-                <h2 class="accent-font">Attractions</h2>
-                <div class="card-container">
-                    <div class="card">
-                        <img src="assets/rides/dragons_flight.jpg" alt="Rides" />
-                        <h3 class="attraction-name">Rides</h3>
-                        <p class="attraction-description">
-                            You can check our most famous roller coasters,
-                            wheels and more!
-                        </p>
-                        <a href="/ecommerce.html#rides" class="btn">Learn More</a>
-                    </div>
-                    <div class="card">
-                        <img src="assets/concert.jpg" alt="Skrillex" />
-                        <h3 class="attraction-name">Events</h3>
-                        <p class="attraction-description">
-                            Check out our soon events!
-                            <br />
-                            Only for our beloved customers Skrillex, Prodigy,
-                            Peppa Pig
-                        </p>
-                        <a href="/ecommerce.html#events" class="btn">Learn More</a>
-                    </div>
-                    <div class="card">
-                        <img src="assets/food.jpg" alt="Restraunts" />
-                        <h3 class="attraction-name">Restraunts</h3>
-                        <p class="attraction-description">
-                            We can boast of a varied cuisine! From simple
-                            eateries to quiet and pleasant restaurants!
-                        </p>
-                        <a href="/ecommerce.html#restaurants" class="btn">Learn More</a>
-                    </div>
-                    <div class="card">
-                        <img src="assets/events/skrillex.jpg" alt="Attraction 1" />
-                        <h3 class="attraction-name">Attraction 1</h3>
-                        <p class="attraction-description">
-                            This is dsfsdfsdfsdfa description of the attraction.
-                        </p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
-                    <div class="card">
-                        <img src="assets/events/skrillex.jpg" alt="Attraction 1" />
-                        <h3 class="attraction-name">Attraction 1</h3>
-                        <p class="attraction-description">
-                            This is dsfsdfsdfsdfa description of the attraction.
-                        </p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
-                    <!-- Repeat for each card -->
+                <div class="card">
+                    <img src="assets/concert.jpg" alt="Skrillex" />
+                    <h3 class="attraction-name">Events</h3>
+                    <p class="attraction-description">
+                        Check out our soon events!
+                        <br />
+                        Only for our beloved customers Skrillex, Prodigy,
+                        Peppa Pig
+                    </p>
+                    <a href="/ecommerce.html#events" class="btn">Learn More</a>
                 </div>
-            </section>
-          
+                <div class="card">
+                    <img src="assets/food.jpg" alt="Restaurants and food" />
+                    <h3 class="attraction-name">Restaurants</h3>
+                    <p class="attraction-description">
+                        We can boast of a varied cuisine! From simple
+                        eateries to quiet and pleasant restaurants!
+                    </p>
+                    <a href="/ecommerce.html#restaurants" class="btn">Learn More</a>
+                </div>
+                <div class="card">
+                    <img src="assets/events/skrillex.jpg" alt="Attraction 1. Photo of an electric artist" />
+                    <h3 class="attraction-name">Attraction 1</h3>
+                    <p class="attraction-description">
+                        Get ready to experience an electrifying fusion of music and thrill as we proudly present the one
+                        and only SKRILLEX live in concert at our spectacular amusement park! Prepare yourselves for an
+                        adrenaline-fueled night that will leave you craving for more!
+                    </p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="card">
+                    <img src="assets/events/AI_robot_park.jpg" alt="Attraction 2. Photo of a cute robot" />
+                    <h3 class="attraction-name">Attraction 2</h3>
+                    <p class="attraction-description">
+                        We are thrilled to inform you that a cutting-edge AI robot will be making its debut at our
+                        beloved park this weekend! Prepare to be amazed as we introduce you to the marvels of artificial
+                        intelligence in a delightful outdoor setting. This is an event you don't want to miss!
+                    </p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <!-- Repeat for each card -->
+            </div>
+        </section>
 
-            <section class="reviews-container">
-                <div class="carousel">
-                    <div class="carousel_track-container">
-                        <div class="carousel_track">
-                            <div class="carousel_slide">
-                                <img
-                                    class="reviewer_image"
-                                    src="assets/events/skrillex.jpg"
-                                    alt="Reviewer 1"
-                                />
-                                <div>
-                                    <h3>Reviewer 1</h3>
-                                    <p>Review 1...</p>
-                                </div>
-                            </div>
-                            <!-- Repeat .carousel_slide for each review -->
-                            <!-- And then again for infinite loop -->
-                            <div class="carousel_slide">
-                                <img
-                                    class="reviewer_image"
-                                    src="assets/events/skrillex.jpg"
-                                    alt="Reviewer 1"
-                                />
-                                <div>
-                                    <h3>Reviewer 1</h3>
-                                    <p>Review 1...</p>
-                                </div>
-                            </div>
-                            <div class="carousel_slide">
-                                <img
-                                    class="reviewer_image"
-                                    src="assets/events/skrillex.jpg"
-                                    alt="Reviewer 1"
-                                />
-                                <div>
-                                    <h3>Reviewer 1</h3>
-                                    <p>Review 1...</p>
-                                </div>
-                            </div>
-                            <div class="carousel_slide">
-                                <img
-                                    class="reviewer_image"
-                                    src="assets/events/skrillex.jpg"
-                                    alt="Reviewer 1"
-                                />
-                                <div>
-                                    <h3>Reviewer 1</h3>
-                                    <p>Review 1...</p>
-                                </div>
-                            </div>
-                            <div class="carousel_slide">
-                                <img
-                                    class="reviewer_image"
-                                    src="assets/events/skrillex.jpg"
-                                    alt="Reviewer 1"
-                                />
-                                <div>
-                                    <h3>Reviewer 1</h3>
-                                    <p>Review 1...</p>
-                                </div>
-                            </div>
 
-                            <!-- Repeat .carousel_slide for each review -->
+        <section class="reviews-container">
+            <div class="carousel">
+                <div class="carousel_track-container">
+                    <div class="carousel_track">
+                        <div class="carousel_slide">
+                            <img class="reviewer_image" src="assets/reviewers/reviewer.jpg" alt="Couple in a beach" />
+                            <div>
+                                <h3>Reviewer 1</h3>
+                                <p>I went with my partner and love it, we are returning next year.</p>
+                            </div>
                         </div>
+                        <!-- Repeat .carousel_slide for each review -->
+                        <!-- And then again for infinite loop -->
+                        <div class="carousel_slide">
+                            <img class="reviewer_image" src="assets/reviewers/robot_girl.jpg" alt="Reviewer 2. Photo of a robotic girl." />
+                            <div>
+                                <h3>Reviewer 2</h3>
+                                <p>My cousin actually works in there, love the family discount</p>
+                            </div>
+                        </div>
+                        <div class="carousel_slide">
+                            <img class="reviewer_image" src="assets/reviewers/children.jpg" alt="Reviewer 3. Couple of kids" />
+                            <div>
+                                <h3>Reviewer 3</h3>
+                                <p>We want to come for the candy only</p>
+                            </div>
+                        </div>
+                        <div class="carousel_slide">
+                            <img class="reviewer_image" src="assets/reviewers/entrepenour.jpg" alt="Reviewer 4. Important concert man." />
+                            <div>
+                                <h3>Reviewer 4</h3>
+                                <p>Top of the line in terms of quality and service, I go only for the concerts.</p>
+                            </div>
+                        </div>
+                        <div class="carousel_slide">
+                            <img class="reviewer_image" src="assets/reviewers/entrepenour.jpg" alt="Reviewer 5. Important concert man." />
+                            <div>
+                                <h3>Reviewer 5</h3>
+                                <p>Concert was amazing</p>
+                            </div>
+                        </div>
+                        <div class="carousel_slide">
+                            <img class="reviewer_image" src="assets/reviewers/robot_girl.jpg" alt="Reviewer 6. A girl robot." />
+                            <div>
+                                <h3>Reviewer 5</h3>
+                                <p>Meh could it be better.</p>
+                            </div>
+                        </div>
+
+
+                        <!-- Repeat .carousel_slide for each review -->
                     </div>
                 </div>
-
-                <!-- Repeat .review-card for each review -->
-            </section>
-        </main>
-
-        <footer class="footer-container bg-dark">
-            <div class="site-name">
-                <a href="/">
-                    <h2 class="accent-font lime-font">WEBDY</h2>
-                </a>
             </div>
 
-            <div class="footer-details">
-                <!-- CONTACTS -->
-                <div class="footer-column">
-                    <h3>Contact Info</h3>
-                    <p>111 Flex Avenue, Party City, Heaven, 777777</p>
-                    <p>Email: example@examplemail.com</p>
-                    <p>Phone: (123) 456 - 7890</p>
-                </div>
+            <!-- Repeat .review-card for each review -->
+        </section>
+    </main>
 
-                <!-- SOCIAL MEDIA -->
-                <div class="footer-column">
-                    <h3>Follow Us</h3>
-                    <div>
-                        <a href="https://www.instagram.com/" target="_blank"
-                            ><img
-                                src="assets/instagram.png"
-                                alt="Follow us on Instagram"
-                        /></a>
-                        <a href="https://twitter.com/" target="_blank"
-                            ><img
-                                src="assets/twitter.png"
-                                alt="Follow us on Twitter"
-                        /></a>
-                        <a href="https://facebook.com/" target="_blank"
-                            ><img
-                                src="assets/facebook.png"
-                                alt="Follow us on Facebook"
-                        /></a>
-                    </div>
-                </div>
+    <footer class="footer-container bg-dark">
+        <div class="site-name">
+            <a href="/">
+                <h2 class="accent-font lime-font">WEBDY</h2>
+            </a>
+        </div>
 
-                <!-- SITEMAP -->
-                <div class="footer-column">
-                    <h3>Site Map</h3>
-                    <a href="ecommerce.html#events">Events</a>
-                    <a href="ecommerce.html#rides">Rides</a>
-                    <a href="ecommerce.html#restraunts">Restraunts</a>
-                    <a href="help.html">Help</a>
+        <div class="footer-details">
+            <!-- CONTACTS -->
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <p>111 Flex Avenue, Party City, Heaven, 777777</p>
+                <p>Email: example@examplemail.com</p>
+                <p>Phone: (123) 456 - 7890</p>
+            </div>
+
+            <!-- SOCIAL MEDIA -->
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="assets/instagram.png"
+                            alt="Follow us on Instagram" /></a>
+                    <a href="https://twitter.com/" target="_blank"><img src="assets/twitter.png"
+                            alt="Follow us on Twitter" /></a>
+                    <a href="https://facebook.com/" target="_blank"><img src="assets/facebook.png"
+                            alt="Follow us on Facebook" /></a>
                 </div>
             </div>
 
-            <div class="developer-info">
-                <p>Developed by Andy, Lisa, David, Fabio, Hyukjin. © 2023</p>
+            <!-- SITEMAP -->
+            <div class="footer-column">
+                <h3>Site Map</h3>
+                <a href="ecommerce.html#events">Events</a>
+                <a href="ecommerce.html#rides">Rides</a>
+                <a href="ecommerce.html#restraunts">Restaurants</a>
+                <a href="help.html">Help</a>
             </div>
-        </footer>
-    </body>
+        </div>
+
+        <div class="developer-info">
+            <p>Developed by Andy, Lisa, David, Fabio, Hyukjin. © 2023</p>
+        </div>
+    </footer>
+</body>
+
 </html>
