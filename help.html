@@ -1,237 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Head contains all information about the page: metadata, keywords, authors, link to stylesheets -->
-    <!-- Also we define title of the page, viewport scaling -->
-    <head>
-        <!-- Title for the page that is placed on tab of the browser -->
-        <title>Webdy Help</title>
-        <!-- Here we specifying a recommended set of HTML5 charachters -->
-        <meta charset="utf-8" />
-        <!-- We define description with specific keywords to help SEO, so serach engines could easily find our website -->
-        <meta
-            name="description"
-            content="official website for the Webdy amusement park where you can find information about the park, buy tickets and buy merchandise"
-        />
-        <meta
-            name="keywords"
-            content="Webdy, amusement, theme park, children park, concerts, events, tickets, roller coasters, wheel, food"
-        />
-        <!-- Metdata that contains information about authors of the website -->
-        <meta
-            name="author"
-            content="UoL Goldsmiths Web Development April 2023 Group 34: Lisa, David, Hyukjin, Andy, Fabio"
-        />
-        <!-- Here defined visible area of the site: initial scale level that is set to be 1 for the screen width -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Head contains all information about the page: metadata, keywords, authors, link to stylesheets -->
+<!-- Also we define title of the page, viewport scaling -->
 
-        <!-- Here the link for the css file with all styles and styling rules -->
-        <link rel="stylesheet" type="text/css" href="styles.css" />
-    </head>
+<head>
+    <!-- Title for the page that is placed on tab of the browser -->
+    <title>Webdy Help</title>
+    <!-- Here we specifying a recommended set of HTML5 charachters -->
+    <meta charset="utf-8" />
+    <!-- We define description with specific keywords to help SEO, so serach engines could easily find our website -->
+    <meta name="description"
+        content="official website for the Webdy amusement park where you can find information about the park, buy tickets and buy merchandise" />
+    <meta name="keywords"
+        content="Webdy, amusement, theme park, children park, concerts, events, tickets, roller coasters, wheel, food" />
+    <!-- Metdata that contains information about authors of the website -->
+    <meta name="author"
+        content="UoL Goldsmiths Web Development April 2023 Group 34: Lisa, David, Hyukjin, Andy, Fabio" />
+    <!-- Here defined visible area of the site: initial scale level that is set to be 1 for the screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Body tag contain the visible part of our website. Here we define structure of what and how content would look like -->
-    <!-- Primarily, we splitted it to three semantic sections: header, main, footer. -->
-    <!-- Each of these sections contain data accroding it's semantic meaning -->
-    <body>
-        <header aria-label="Navigation">
-            <!-- Big flexbox container to align all our elements evenely -->
-            <div class="nav-container">
-                <!-- Logo container element, that will push user to the homepage -->
-                <a class="logo-container" href="index.html">
-                    <h1 class="webdy-logo accent-font lime-font" aria->
-                        WEBDY
-                    </h1>
-                </a>
-                <!-- We used nav tag for pure semantic meanings, so screen reader could easily read the content: links -->
-                <!-- Also it help to understand the makrup for other developers and style components -->
-                <nav class="nav-links">
-                    <a href="/ecommerce.html#rides" class="nav-link">Rides</a>
-                    <a href="/ecommerce.html#events" class="nav-link">Events</a>
-                    <a href="/ecommerce.html#restraunts" class="nav-link"
-                        >Restaurants</a
-                    >
-                    <a href="/help.html#reviews" class="nav-link">Reviews</a>
-                    <a href="/help.html" class="nav-link">Help</a>
-                </nav>
-            </div>
-        </header>
+    <!-- Here the link for the css file with all styles and styling rules -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
 
-        <!-- Main navigation contains the content of the website: all articles, photos, tables and etc. -->
-        <main>
-            <section class="hero-banner">
-                <img
-                    class="hero-banner-image"
-                    src="assets/rides/mystic_journey.jpg"
-                    alt="Attractions advertising banner photo"
-                />
-                <div class="hero-banner-content">
-                    <h1 class="accent-font light-font">Your Big Help</h1>
-                    <br />
-                    <h1 class="accent-font lime-font">Right Here!</h1>
+<!-- Body tag contain the visible part of our website. Here we define structure of what and how content would look like -->
+<!-- Primarily, we splitted it to three semantic sections: header, main, footer. -->
+<!-- Each of these sections contain data accroding it's semantic meaning -->
 
-                    <p class="light-font">
-                        Additional Information About the Event Here
-                    </p>
-
-                    <button class="btn primary-button">Learn More</button>
-                </div>
-            </section>
-
-            <section class="schedule">
-                <h2 class="accent-font dark-font">Work Schedule</h2>
-                <div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Day</th>
-                                <th>Start Time</th>
-                                <th>End Time</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Monday</td>
-                                <td>8:00 AM</td>
-                                <td>5:00 PM</td>
-                            </tr>
-                            <tr>
-                                <td>Tuesday</td>
-                                <td>8:00 AM</td>
-                                <td>5:00 PM</td>
-                            </tr>
-                            <tr>
-                                <td>Wednesday</td>
-                                <td>8:00 AM</td>
-                                <td>5:00 PM</td>
-                            </tr>
-                            <tr>
-                                <td>Thursday</td>
-                                <td>8:00 AM</td>
-                                <td>5:00 PM</td>
-                            </tr>
-                            <tr>
-                                <td>Friday</td>
-                                <td>8:00 AM</td>
-                                <td>5:00 PM</td>
-                            </tr>
-                            <tr>
-                                <td>Saturday</td>
-                                <td>8:00 AM</td>
-                                <td>5:00 PM</td>
-                            </tr>
-                            <tr>
-                                <td>Sunday</td>
-                                <td>8:00 AM</td>
-                                <td>5:00 PM</td>
-                            </tr>
-                            <!-- Repeat for each day of the week -->
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-            <!-- Section with popular questions and answers -->
-            <section id="faq" class="accordion">
-                <h2 class="section-title accent-font peach-font">
-                    Frequently Asked Questions
-                </h2>
-                <details class="accordion-item">
-                    <summary class="accordion-title">
-                        How to get to your park? Are there any buses or public
-                        transport?
-                    </summary>
-                    <div class="accordion-content">Answer to question 1...</div>
-                </details>
-                <details class="accordion-item">
-                    <summary class="accordion-title">Question 2</summary>
-                    <div class="accordion-content">Answer to question 2...</div>
-                </details>
-                <!-- Add more question-answer pairs as needed -->
-            </section>
-        </main>
-        <!-- <div class="grid-container-index">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="ecommerce.html">Buy Tickets and Merch</a></li>
-                    <li><a href="FAQs.html">FAQs</a></li>
-                </ul>
+<body>
+    <header aria-label="Navigation">
+        <!-- Big flexbox container to align all our elements evenely -->
+        <div class="nav-container">
+            <!-- Logo container element, that will push user to the homepage -->
+            <a class="logo-container" href="index.html">
+                <h1 class="webdy-logo accent-font lime-font" aria->
+                    WEBDY
+                </h1>
+            </a>
+            <!-- We used nav tag for pure semantic meanings, so screen reader could easily read the content: links -->
+            <!-- Also it help to understand the makrup for other developers and style components -->
+            <nav class="nav-links">
+                <a href="/ecommerce.html#rides" class="nav-link">Rides</a>
+                <a href="/ecommerce.html#events" class="nav-link">Events</a>
+                <a href="/ecommerce.html#restraunts" class="nav-link">Restaurants</a>
+                <a href="/index.html#reviews" class="nav-link">Reviews</a>
+                <a href="/help.html" class="nav-link">Help</a>
             </nav>
-            <div id="FPBanner">
-                <h1>Webdy Amusement Park</h1>
-                <h1>Frequently Asked Questions</h1>
-            </div>
+        </div>
+    </header>
 
-            <div id="column1">
-                <h3>Can I get a reimbursement?</h3>
-                <p>No, you can't</p>
-                <h3>Are the rides dangerous?</h3>
-                <p>
-                    yes, pretty much, we couldn't invest much money on safety
-                    issues.
+    <!-- Main navigation contains the content of the website: all articles, photos, tables and etc. -->
+    <main>
+        <section class="hero-banner">
+            <img class="hero-banner-image" src="assets/rides/mystic_journey.jpg"
+                alt="Attractions advertising banner photo" />
+            <div class="hero-banner-content">
+                <h1 class="accent-font light-font">Contact us for your next adventure</h1>
+                <br />
+                <h1 class="accent-font lime-font">Right Here!</h1>
+
+                <p class="light-font">
+                    Let us know about your event. We will help you to make it
                 </p>
+
+                <button class="btn primary-button">Learn More</button>
+            </div>
+        </section>
+
+        <section class="schedule">
+            <h2 class="accent-font dark-font">Work Schedule</h2>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>8:00 AM</td>
+                            <td>5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>8:00 AM</td>
+                            <td>5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>8:00 AM</td>
+                            <td>5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>8:00 AM</td>
+                            <td>5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>8:00 AM</td>
+                            <td>5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>8:00 AM</td>
+                            <td>5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>8:00 AM</td>
+                            <td>5:00 PM</td>
+                        </tr>
+                        <!-- Repeat for each day of the week -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section with popular questions and answers -->
+        <section id="faq" class="accordion">
+            <h2 class="section-title accent-font peach-font">
+                Frequently Asked Questions
+            </h2>
+            <details class="accordion-item">
+                <summary class="accordion-title">
+                    How to get to your park? Are there any buses or public
+                    transport?
+                </summary>
+                <div class="accordion-content"> Buses are provided by the municipal transport association </div>
+            </details>
+            <details class="accordion-item">
+                <summary class="accordion-title">Can I get a reimbursement?</summary>
+                <div class="accordion-content"> No</div>
+            </details>
+            <!-- Add more question-answer pairs as needed -->
+        </section>
+    </main>
+
+    <footer class="footer-container bg-dark">
+        <div class="site-name">
+            <a href="/">
+                <h2 class="accent-font lime-font">WEBDY</h2>
+            </a>
+        </div>
+
+        <div class="footer-details">
+            <!-- CONTACTS -->
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <p>111 Flex Avenue, Party City, Heaven, 777777</p>
+                <p>Email: example@examplemail.com</p>
+                <p>Phone: (123) 456 - 7890</p>
             </div>
 
-            <div id="Footer">
-                <address>
-                    Address: Av Callao 2091, Buenos Aires, Argentina
-                </address>
-                <p>phone: +54 9 11 5185 0154</p>
-                <p>email: info@webdypark.com</p>
-                <p>follow us on instagram and facebook</p>
-            </div>
-        </div> -->
-
-        <footer class="footer-container bg-dark">
-            <div class="site-name">
-                <a href="/">
-                    <h2 class="accent-font lime-font">WEBDY</h2>
-                </a>
-            </div>
-
-            <div class="footer-details">
-                <!-- CONTACTS -->
-                <div class="footer-column">
-                    <h3>Contact Info</h3>
-                    <p>111 Flex Avenue, Party City, Heaven, 777777</p>
-                    <p>Email: example@examplemail.com</p>
-                    <p>Phone: (123) 456 - 7890</p>
+            <!-- SOCIAL MEDIA -->
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="assets/instagram.png"
+                            alt="Follow us on Instagram" /></a>
+                    <a href="https://twitter.com/" target="_blank"><img src="assets/twitter.png"
+                            alt="Follow us on Twitter" /></a>
+                    <a href="https://facebook.com/" target="_blank"><img src="assets/facebook.png"
+                            alt="Follow us on Facebook" /></a>
                 </div>
-
-                <!-- SOCIAL MEDIA -->
-                <div class="footer-column">
-                    <h3>Follow Us</h3>
-                    <div>
-                        <a href="https://www.instagram.com/" target="_blank"
-                            ><img
-                                src="assets/instagram.png"
-                                alt="Follow us on Instagram"
-                        /></a>
-                        <a href="https://twitter.com/" target="_blank"
-                            ><img
-                                src="assets/twitter.png"
-                                alt="Follow us on Twitter"
-                        /></a>
-                        <a href="https://facebook.com/" target="_blank"
-                            ><img
-                                src="assets/facebook.png"
-                                alt="Follow us on Facebook"
-                        /></a>
-                    </div>
-                </div>
-
-                <!-- SITEMAP -->
-                <div class="footer-column">
-                    <h3>Site Map</h3>
-                    <a href="ecommerce.html#events">Events</a>
-                    <a href="ecommerce.html#rides">Rides</a>
-                    <a href="ecommerce.html#restraunts">Restaurants</a>
-                    <a href="help.html">Help</a>
-                </div>
             </div>
 
-            <div class="developer-info">
-                <p>Developed by Andy, Lisa, David, Fabio, Hyukjin. © 2023</p>
+            <!-- SITEMAP -->
+            <div class="footer-column">
+                <h3>Site Map</h3>
+                <a href="ecommerce.html#events">Events</a>
+                <a href="ecommerce.html#rides">Rides</a>
+                <a href="ecommerce.html#restraunts">Restaurants</a>
+                <a href="help.html">Help</a>
             </div>
-        </footer>
-    </body>
+        </div>
+
+        <div class="developer-info">
+            <p>Developed by Andy, Lisa, David, Fabio, Hyukjin. © 2023</p>
+        </div>
+    </footer>
+</body>
+
 </html>
