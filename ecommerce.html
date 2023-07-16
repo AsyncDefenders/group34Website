@@ -1,62 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Head contains all information about the page: metadata, keywords, authors, link to stylesheets -->
+<!-- Also we define title of the page, viewport scaling -->
+
 <head>
-    <title>Webdy Amusement Park</title>
-    <meta charset="utf-8">
-    <meta name="description" content="official website for the Webdy amusement park where you can find information about the park, buy tickets and buy merchandise">
-    <meta name="author" content="UoL Goldsmiths Web Development April 2023 Group 34">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="refresh" content="600">
-    <meta name="keywords" content="Book Reading Discussion 'Reading Club'">
-    <meta name="og:title" property="og:title" content="official website for the amusement park">
-    <meta name="robots" content="index, follow">
-    <link rel="stylesheet" type="text/css" href="styleSheet.css">
+    <!-- Title for the page that is placed on tab of the browser -->
+    <title>Webdy Attractions</title>
+    <!-- Here we specifying a recommended set of HTML5 charachters -->
+    <meta charset="utf-8" />
+    <!-- We define description with specific keywords to help SEO, so serach engines could easily find our website -->
+    <meta name="description"
+        content="official website for the Webdy amusement park where you can find information about the park, buy tickets and buy merchandise" />
+    <meta name="keywords"
+        content="Webdy, amusement, theme park, children park, concerts, events, tickets, roller coasters, wheel, food" />
+    <!-- Metdata that contains information about authors of the website -->
+    <meta name="author"
+        content="UoL Goldsmiths Web Development April 2023 Group 34: Lisa, David, Hyukjin, Andy, Fabio" />
+    <!-- Here defined visible area of the site: initial scale level that is set to be 1 for the screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Here the link for the css file with all styles and styling rules -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
-<body> 
-    <div class = "grid-container-index">
-        
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="ecommerce.html">Buy Tickets and Merch</a></li>
-                    <li><a href="FAQs.html">FAQs</a></li>
-                </ul>
+
+<!-- Body tag contain the visible part of our website. Here we define structure of what and how content would look like -->
+<!-- Primarily, we splitted it to three semantic sections: header, main, footer. -->
+<!-- Each of these sections contain data accroding it's semantic meaning -->
+
+<body>
+    <header aria-label="Navigation">
+        <!-- Big flexbox container to align all our elements evenely -->
+        <div class="nav-container">
+            <!-- Logo container element, that will push user to the homepage -->
+            <a class="logo-container" href="index.html">
+                <h1 class="webdy-logo accent-font lime-font" aria->
+                    WEBDY
+                </h1>
+            </a>
+            <!-- We used nav tag for pure semantic meanings, so screen reader could easily read the content: links -->
+            <!-- Also it help to understand the makrup for other developers and style components -->
+            <nav class="nav-links">
+                <a href="/ecommerce.html#rides" class="nav-link">Rides</a>
+                <a href="/ecommerce.html#events" class="nav-link">Events</a>
+                <a href="/ecommerce.html#restraunts" class="nav-link">Restaurants</a>
+                <a href="/index.html#reviews" class="nav-link">Reviews</a>
+                <a href="/help.html" class="nav-link">Help</a>
             </nav>
+        </div>
+    </header>
 
-            <header id="FPBanner">
-                <h1>Webdy Amusement Park</h1>
-                <h1>Buy Tickets And Merch</h1>
-            </header>
-            
-            <div id="column1">
-                <h2>Single Ticket</h2>
-                <h3>Full Pass</h3>
-                <p>standard ticket $55</p>
-                <h3>Special Event</h3>
-                <p>access to the main square only at the time of the event, $40</p>
+    <!-- Main navigation contains the content of the website: all articles, photos, tables and etc. -->
+    <main>
+        <section class="hero-banner">
+            <img class="hero-banner-image" src="assets/rides/galactic_cruiser.jpg"
+                alt="Roller Coaster advertising banner photo" />
+            <div class="hero-banner-content">
+                <h1 class="accent-font light-font">Give a Chance</h1>
+                <br />
+                <h1 class="accent-font lime-font">To our Slides</h1>
+
+                <p class="light-font">
+                    Come to the opening of the biggest high-speed slides in
+                    the whole world! 15 minutes of adrenaline and
+                    unforgettable impressions!
+                </p>
+
+                <button class="btn primary-button">Learn More</button>
+            </div>
+        </section>
+        <div class="grid-container-index">
+            <section id="rides" class="res-container dark-font">
+                <h2 class="accent-font">Rides</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <img src="assets/rides/dragons_flight.jpg" alt="Dragon's Flight" />
+                        <h3 class="attraction-name">Dragon's Flight</h3>
+                        <p class="attraction-description">
+                            Immerse yourself in a mythical world atop the wings of a dragon on our Dragon's Flight
+                            rollercoaster! Soar through enchanted forests, swoop around towering castle turrets, and
+                            dive into hidden valleys. Feel your heart race on this thrilling high-speed journey suitable
+                            for all brave adventurers.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/rides/mystic_journey.jpg" alt="Mystic River Journey" />
+                        <h3 class="attraction-name">Mystic River Journey</h3>
+                        <p class="attraction-description">
+                            Uncover the secrets of the Mystic River on this relaxing yet exciting water ride. Travel
+                            through caves with bioluminescent creatures, beautiful waterfalls, and ancient ruins. Get
+                            ready for the surprise splashdown at the end! Great for family members of all ages to enjoy.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/rides/galactic_cruiser.jpg" alt="Galactic Battle Star Cruiser" />
+                        <h3 class="attraction-name">Galactic Battle Star Cruiser</h3>
+                        <p class="attraction-description">
+                            Blast off into space aboard the Galactic Battle Star Cruiser! Navigate asteroid fields,
+                            engage in epic laser battles and traverse wormholes in this interactive 4D dark ride.
+                            Experience the awe and wonder of space travel with cutting-edge special effects and
+                            thrilling gameplay. Recommended for ages 7 and up.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="events" class="res-container dark-font">
+                <h2 class="accent-font">Events</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <img src="assets/events/skrillex.jpg" alt="Skrillex" />
+                        <h3 class="attraction-name">Skrillex Live!</h3>
+                        <p class="attraction-description">
+                            Get ready to dance the night away with Grammy Award-winning DJ Skrillex! Experience his
+                            iconic dubstep beats under a mesmerizing light show. Feel the electric energy of his biggest
+                            hits like "Bangarang" and "Scary Monsters and Nice Sprites". Must be 18 or older to attend.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/events/prodigy.jpeg" alt="Prodigy Firestarter Concert" />
+                        <h3 class="attraction-name">Prodigy Firestarter Concert</h3>
+                        <p class="attraction-description">
+                            It's time to ignite your night with the Prodigy Firestarter Concert! Experience the
+                            pioneering electronic beats from this legendary group, live in our main arena. Hear their
+                            biggest hits like "Firestarter" and "Breathe". This event is recommended for ages 16 and up.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/events/peppa_pig.jpeg" alt="Peppa Pig's Grand Playdate" />
+                        <h3 class="attraction-name">Peppa Pig's Grand Playdate</h3>
+                        <p class="attraction-description">
+                            An exciting day for our younger visitors! Join Peppa Pig and her friends for a fun-filled
+                            playdate. Watch a live show featuring your favorite characters, enjoy interactive games, and
+                            even meet Peppa Pig herself! Perfect for families with children under 10.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="restaurants" class="res-container dark-font">
+                <h2 class="accent-font">Restaurants</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <img src="assets/restaurants/asteroid_dinner.jpg" alt="Asteroid Diner" />
+                        <h3 class="attraction-name">Asteroid Diner</h3>
+                        <p class="attraction-description">
+                            Venture into the great beyond at the Asteroid Diner. With a starry atmosphere that
+                            transports you to outer space, our menu boasts a cosmic array of dishes from Galaxy Burgers
+                            to Nebula Nachos. Vegetarian and gluten-free options are available.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/restaurants/jungle_joes.jpg" alt="Jungle Joe's" />
+                        <h3 class="attraction-name">Jungle Joe's</h3>
+                        <p class="attraction-description">
+                            Deep in the heart of the park, Jungle Joe's offers a tropical escape for hungry explorers.
+                            Dine in our tree-top huts and enjoy a range of fresh, exotic fare like Tiki Tacos and
+                            Rainforest Rice Bowls. Try our legendary Volcano Pizza, if you dare!
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/restaurants/candy_kingdom.jpg" alt="Candy Kingdom" />
+                        <h3 class="attraction-name">Candy Kingdom</h3>
+                        <p class="attraction-description">
+                            A dream come true for those with a sweet tooth, Candy Kingdom serves a variety of whimsical
+                            treats in a fairytale setting. From Unicorn Milkshakes to Pixie Popcorn, there's a
+                            delightful dessert for everyone in the family. Don't forget to try our famous Rainbow
+                            Waffles!
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer-container bg-dark">
+        <div class="site-name">
+            <a href="/">
+                <h2 class="accent-font lime-font">WEBDY</h2>
+            </a>
+        </div>
+
+        <div class="footer-details">
+            <!-- CONTACTS -->
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <p>111 Flex Avenue, Party City, Heaven, 777777</p>
+                <p>Email: example@examplemail.com</p>
+                <p>Phone: (123) 456 - 7890</p>
             </div>
 
-            <div id="column2">
-                <h2>Family Ticket</h2>
-                <h3>Full Pass</h3>
-                <p>2 adults, 2 kids under 12, weekday: $150</p>
-                <h3>Special Event</h3>
-                <p>access to the main square only at the time of the event, $120</p>
+            <!-- SOCIAL MEDIA -->
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="assets/instagram.png"
+                            alt="Follow us on Instagram" /></a>
+                    <a href="https://twitter.com/" target="_blank"><img src="assets/twitter.png"
+                            alt="Follow us on Twitter" /></a>
+                    <a href="https://facebook.com/" target="_blank"><img src="assets/facebook.png"
+                            alt="Follow us on Facebook" /></a>
+                </div>
             </div>
 
-            <div id="column3">
-                <h2>Merchandise</h2>
-                <h3>Webdy t-shirt</h3>
-                <h3>Sweat Shirt</h3>
+            <!-- SITEMAP -->
+            <div class="footer-column">
+                <h3>Site Map</h3>
+                <a href="ecommerce.html#events">Events</a>
+                <a href="ecommerce.html#rides">Rides</a>
+                <a href="ecommerce.html#restraunts">Restaurants</a>
+                <a href="help.html">Help</a>
             </div>
- 
-        <footer id="Footer">
-            <address> Address: Av Callao 2091, Buenos Aires, Argentina</address>
-            <p>phone: +54 9 11 5185 0154</p>
-            <p>email: info@webdypark.com</p>
-            <p>follow us on instagram and facebook</p>
-        </footer>    
-        
-    </div>
+        </div>
+
+        <div class="developer-info">
+            <p>Developed by Andy, Lisa, David, Fabio, Hyukjin. © 2023</p>
+        </div>
+    </footer>
 </body>
+
 </html>

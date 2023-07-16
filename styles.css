@@ -1,0 +1,606 @@
+/* INITIALIZING STYLING VARIABLES */
+
+/* FONTS SYSTEM */
+@font-face {
+    font-family: "AlfaFont";
+    src: url(assets/fonts/AlfaSlabOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(assets/fonts/Roboto-Regular.ttf);
+}
+
+/* SYSTEM VARIABLES*/
+:root {
+    /* PALETTE */
+    --primary: #8b76e8;
+    --secondary: #e9e9fc;
+    --accent-p: #fea16f;
+    --accent-s: #d4e88b;
+    --success: #befabec6;
+    --info: #a2dbe4;
+
+    --warning: #edac5ceb;
+    --danger: #d15951;
+
+    --light: #f4f4f4;
+    --dark: #180d49;
+
+    /* BREAKPOINTS */
+    --sm: 600px;
+    --md: 768px;
+    --lg: 992px;
+    --xl: 1200px;
+}
+
+/* FONTS STYLES */
+.accent-font {
+    font-family: "AlfaFont";
+    font-weight: bold;
+}
+
+.dark-font {
+    color: var(--dark);
+}
+
+.light-font {
+    color: var(--light);
+}
+
+.lime-font {
+    color: var(--accent-s);
+}
+
+.peach-font {
+    color: var(--accent-p);
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+/* BACKGROUNDS */
+.bg-light {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.bg-dark {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+/* REMOVING ALL STYLING FOR ALL TYPES OF CONTAINERS AND ELEMENTS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1em;
+}
+
+body {
+    background-color: var(--light);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* a:hover {
+    text-decoration: none;
+} */
+
+/* NAVIGATION */
+/* Mobile first */
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1em 2em;
+    background-color: var(
+        --primary
+    ); /* Adjust this to get the matte glass effect */
+    backdrop-filter: blur(5px); 
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 50px;
+    height: 50px;
+    margin-right: 0.5em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 0.5em;
+    font-size: initial;
+}
+
+.nav-link {
+    color: var(--accent-s);
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-p);
+}
+
+.nav-link:active {
+    text-decoration: solid;
+}
+
+/* Larger screens */
+@media (min-width: 600px) {
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1em 2em;
+    }
+    
+    .nav-links {
+        display: flex;
+        font-size: 0.8em;
+    }
+    
+    .logo-container {
+        margin-bottom: 0;
+    }
+}
+
+
+/* HERO BANNER */
+.hero-banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2em;
+    height: 70vh;
+    padding: 2em;
+    font-size: 18px;
+}
+
+.hero-banner:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dark);
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.hero-banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-banner-content {
+    position: relative;
+    z-index: 2;
+    color: var(--accent-p);
+}
+
+.hero-banner-content p {
+    margin: 1.5em 0;
+}
+.hero-banner-content h1 {
+    font-size: 3em; /* Increase font size of header */
+}
+
+@media (max-width: 768px) {
+    .hero-banner-content {
+        font-size: initial;
+    }
+}
+/* BUTTONS */
+.btn {
+    margin: 20px 0;
+    padding: 0.8em 1em;
+    border-radius: 30px;
+    border: 0px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    color: var(--dark);
+}
+
+.primary-button {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.secondary-button {
+    background-color: var(--secondary);
+    color: var(--dark);
+}
+
+.fill {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.noFill {
+    background-color: transparent;
+}
+
+.link-button {
+    background-color: transparent;
+    color: var(--primary);
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* ATTRACTIONS SECTION */
+
+.attraction-description {
+    font-size: 1em;
+}
+
+.res-container {
+    padding: 2em 2em;
+    /* background: linear-gradient(
+        -45deg,
+        var(--accent-p),
+        var(--accent-s),
+        var(--secondary),
+        var(--success)
+    );
+    background-size: 400% 400%;
+    animation: colorful-gradient 15s ease infinite; */
+}
+
+.res-container h2 {
+    margin: 1em;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch; /* Add this property */
+    margin: auto;
+}
+
+.card {
+    flex: 1 0 calc(30% - 20px); /* approx third of the container width minus some margin, you can adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1em;
+    box-sizing: border-box;
+    align-items: stretch;
+    padding: 0 0 10px;
+    border-radius: 20px;
+    cursor: pointer;
+
+    background: rgba(255, 255, 255, 0.5); /* Adjust transparency as desired */
+    overflow: hidden;
+    transition: transform 0.8s ease-in-out; /* Controls the scaling transition on hover */
+    backdrop-filter: blur(30px); /* Creates the frosted glass effect */
+}
+
+.card img {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ensure the image covers the full width of the card */
+    min-height: 200px; /* limit the height of the image */
+}
+
+.card * {
+    flex: 1;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.card > p,
+.card > a,
+.card > h3  {
+    padding: 20px 20px;
+}
+
+.card .btn {
+    flex-grow: 0;
+    align-self: center;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 0 100%;
+        margin: 1em 0.5em;
+    }
+
+    .res-container {
+        margin: 1em 1em;
+        padding: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .card {
+        flex: 1 0 calc(50% - 20px); /* half of the container width minus some margin */
+    }
+}
+
+/* KEYFRAMES ANIMATION */
+
+@keyframes colorful-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* REVIEWS SECTION */
+.reviews-container {
+    display: flex;
+    overflow: auto;
+    animation: float 20s infinite linear;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.review-card {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+.reviewer-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.review-content {
+    flex: 1;
+}
+
+.carousel {
+    overflow: hidden;
+}
+
+.carousel_track-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel_track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+.carousel_slide {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+}
+
+.reviewer_image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* FOOTER CONTAINER*/
+.footer-container {
+    color: #fff; /* replace with your preferred color */
+    font-weight: 200;
+    font-size: 16px;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 1em;
+}
+
+.site-name {
+    margin: 1em;
+    text-align: center;
+}
+
+.footer-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-size: 16px;
+    width: 100%;
+    flex-wrap: wrap; /* to make it responsive */
+    padding: 1em 0;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px; /* add some space between the columns */
+    flex: 1; /* each column will take up an equal amount of space */
+}
+
+.footer-column h3 {
+    font-size: large;
+    padding: 0 0 20px;
+}
+
+.footer-column img {
+    width: 30px; /* adjust this value as needed */
+    height: auto;
+}
+
+.footer-column a {
+    color: var(--light);
+}
+
+.developer-info {
+    text-align: center;
+    font-size: small;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 600px) {
+    .footer-details {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* SCHEDULE */
+
+.schedule {
+    padding: 2em;
+    background-color:var(--light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.schedule div {
+    max-width: 90%; /* Set a maximum width to the div */
+    border: var(--primary) solid 15px;
+    border-radius: 20px;
+    margin: 1em 0;
+    align-items: center;
+    overflow: auto; /* Ensures that the div will have a scrollbar if the table is too wide */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling transition */
+}
+
+.schedule div table {
+    width: 100%; 
+    border-collapse: collapse;
+    table-layout: fixed; 
+}
+
+.schedule th, .schedule td {
+    text-align: left;
+    padding: 0.5em;
+    word-wrap: break-word; /* Ensures that the content will wrap if it's too wide for its cell */
+}
+
+.schedule thead th {
+    background-color: var(--primary);
+}
+
+.schedule tr:nth-child(even) {
+    background-color: var(--secondary);
+}
+
+@media (max-width: 600px) {
+    .schedule {
+        padding: 1em 0.5em;
+    }
+    .schedule div {
+        transform: scale(1); /* Scale the div down on small screens */
+        font-size: 0.6em;
+    }
+}
+
+
+/* ACCORDION */
+
+.accordion {
+    width: 90%;
+    max-width: 90%;
+    align-self: center;
+    margin: 0 auto;
+    padding: 20px;
+    color: var(--dark)
+}
+
+.section-title {
+    margin: 2em 0;
+    text-align: center;
+}
+
+.accordion-item {
+    background-color: var(--accent-s);
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 1em 1em;
+}
+
+.accordion-title {
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.accordion-content {
+    margin: 0;
+    padding: 0 10px 10px;
+}
+
+@media (max-width: 600px) {
+    .accordion {
+        width: 100%;
+        padding: 10px;
+    }
+}
